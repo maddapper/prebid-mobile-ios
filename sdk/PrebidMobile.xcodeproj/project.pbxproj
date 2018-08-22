@@ -81,7 +81,6 @@
 		C2B1747A1EE1E3C3006304C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B174791EE1E3C3006304C0 /* UIKit.framework */; };
 		C2B1747C1EE1E3C9006304C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B1747B1EE1E3C9006304C0 /* SystemConfiguration.framework */; };
 		C2B1747E1EE1E3CE006304C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B1747D1EE1E3CE006304C0 /* QuartzCore.framework */; };
-		D782504DC648103AF5BD50BC /* Pods_PrebidMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AFEE5EA392F4DB8C306C71 /* Pods_PrebidMobile.framework */; };
 		F576AEF420D1B1FF00D41FBC /* PBPrebidCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F576AEF320D1B1FF00D41FBC /* PBPrebidCacheTests.m */; };
 /* End PBXBuildFile section */
 
@@ -109,9 +108,6 @@
 		606A4352202BC98100492433 /* PrebidMobile-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PrebidMobile-umbrella.h"; sourceTree = "<group>"; };
 		60CEC02A2084DF3A00CA104B /* PBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBConstants.h; sourceTree = "<group>"; };
 		60CEC02B2084DF3A00CA104B /* PBConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBConstants.m; sourceTree = "<group>"; };
-		6F0C6F216E7868AD91FB9873 /* Pods-PrebidMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrebidMobile/Pods-PrebidMobile.debug.xcconfig"; sourceTree = "<group>"; };
-		9210AF2A06DB7185CEEFA2E5 /* Pods-PrebidMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrebidMobile/Pods-PrebidMobile.release.xcconfig"; sourceTree = "<group>"; };
-		A3AFEE5EA392F4DB8C306C71 /* Pods_PrebidMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40B92AD1FCCC5E300A676A8 /* PBHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBHost.h; sourceTree = "<group>"; };
 		C210FE361FC3375D0010B588 /* PrebidCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrebidCache.h; sourceTree = "<group>"; };
 		C210FE371FC3375D0010B588 /* PrebidCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrebidCache.m; sourceTree = "<group>"; };
@@ -211,7 +207,6 @@
 				C2B174721EE1E3AC006304C0 /* CoreLocation.framework in Frameworks */,
 				C2B174731EE1E3AC006304C0 /* CoreMedia.framework in Frameworks */,
 				C2B174741EE1E3AC006304C0 /* CoreTelephony.framework in Frameworks */,
-				D782504DC648103AF5BD50BC /* Pods_PrebidMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,9 +216,8 @@
 		05E2E458212B34AC00D532F5 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				05E2E482212DD3CF00D532F5 /* Services */,
 				05E2E45D212B36C300D532F5 /* PBAnalyticsService.h */,
-				05E2E45F212B371500D532F5 /* PBSegmentAnalyticsService.h */,
-				05E2E460212B371500D532F5 /* PBSegmentAnalyticsService.m */,
 				05E2E463212B37F800D532F5 /* PBAnalyticsEvent.h */,
 				05E2E464212B37F800D532F5 /* PBAnalyticsEvent.m */,
 				05E2E467212B751E00D532F5 /* PBAnalyticsManager.h */,
@@ -232,13 +226,13 @@
 			path = Analytics;
 			sourceTree = "<group>";
 		};
-		377238D1887176678B1A5191 /* Pods */ = {
+		05E2E482212DD3CF00D532F5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				6F0C6F216E7868AD91FB9873 /* Pods-PrebidMobile.debug.xcconfig */,
-				9210AF2A06DB7185CEEFA2E5 /* Pods-PrebidMobile.release.xcconfig */,
+				05E2E45F212B371500D532F5 /* PBSegmentAnalyticsService.h */,
+				05E2E460212B371500D532F5 /* PBSegmentAnalyticsService.m */,
 			);
-			name = Pods;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		606A4351202BC90800492433 /* Recovered References */ = {
@@ -314,7 +308,6 @@
 				C2B16EA21EE1BF8A006304C0 /* Frameworks */,
 				C2B16E1C1EE1BE69006304C0 /* Products */,
 				606A4351202BC90800492433 /* Recovered References */,
-				377238D1887176678B1A5191 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -430,7 +423,6 @@
 				C2B1746E1EE1E3AC006304C0 /* CoreLocation.framework */,
 				C2B1746F1EE1E3AC006304C0 /* CoreMedia.framework */,
 				C2B174701EE1E3AC006304C0 /* CoreTelephony.framework */,
-				A3AFEE5EA392F4DB8C306C71 /* Pods_PrebidMobile.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -495,7 +487,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2B16E231EE1BE69006304C0 /* Build configuration list for PBXNativeTarget "PrebidMobile" */;
 			buildPhases = (
-				C3E04B3F5A730C363B0D85B0 /* [CP] Check Pods Manifest.lock */,
 				C2B16E161EE1BE69006304C0 /* Sources */,
 				C2B16E171EE1BE69006304C0 /* Frameworks */,
 				C2B16E181EE1BE69006304C0 /* Headers */,
@@ -569,27 +560,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		C3E04B3F5A730C363B0D85B0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PrebidMobile-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C281E1781EE5EAF700F2F4A9 /* Sources */ = {
@@ -791,7 +761,6 @@
 		};
 		C2B16E241EE1BE69006304C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F0C6F216E7868AD91FB9873 /* Pods-PrebidMobile.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -816,7 +785,6 @@
 		};
 		C2B16E251EE1BE69006304C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9210AF2A06DB7185CEEFA2E5 /* Pods-PrebidMobile.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
